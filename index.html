@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="full-page">
@@ -30,11 +30,13 @@
                 <div class="wrapper">
                     <nav class="navigation-top">
                         <ul class="navigation-top__list">
-                            <button class="navigation-top__list-adaptive-burger">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-                                </svg>
-                            </button>
+                            <li class="navigation-top__item">
+                                <button class="navigation-top__list-adaptive-burger">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                                    </svg>
+                                </button>
+                            </li>
                             <li class="navigation-top__item">
                                 <label class="navigation-top__sort" for="navigation-top-sort">Sort by:</label>
                                 <select class="navigation-top__select" name="sort" id="navigation-top-sort">
@@ -56,6 +58,7 @@
                             <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                         </svg>
                         <h3 class="navigation-left__title">Filters</h3>
+                        <button class="navigation-left__closebtn"></button>
                     </div>
                     <ul class="navigation-left__list">
                         <li class="navigation-left__item navigation-left__item-sex">
@@ -70,22 +73,32 @@
                             <div id="range-slider" class="navigation-left__item-age">
                             </div>
                             <div class="navigation-left__item-min-max-wrapper">
-                                <input class="navigation-left__item-minage range-parametres" id="first-input" min="1" max="100" type="number" inputmode="numeric" pattern="[0-9]*">
-                                <input class="navigation-left__item-maxage range-parametres" id="second-input" min="1" max="100" type="number" inputmode="numeric" pattern="[0-9]*">
+                                <input class="navigation-left__item-minage range-parametres" id="first-input" min="1" max="100" type="number" inputmode="numeric">
+                                <input class="navigation-left__item-maxage range-parametres" id="second-input" min="1" max="100" type="number" inputmode="numeric">
                             </div>
                             <input type="submit" class="navigation-left__item-submit range-parametres" value="OK">
                             <hr>
                         </li>
                         <li class="navigation-left__item">
-                            <button class="navigation-left__reset-btn">Reset filters</button>
+                            <button class="navigation-left__bottom-btn navigation-left__apply-btn">Apply</button>
+                            <button class="navigation-left__bottom-btn navigation-left__reset-btn">Reset filters</button>
                         </li>
                     </ul>
                 </nav>
 
             </main>
         </div>
+        <section class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </section>
     </div>
-
     <script src="js/bundle.js"></script>
 </body>
 </html>
